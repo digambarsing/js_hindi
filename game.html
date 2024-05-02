@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #quiz-container {
+        text-align: center;
+        margin-top: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <h2>Welcome to Math Quiz!</h2>
+    <p>What is:</p>
+    <div id="question"></div>
+    <input type="number" id="answer" placeholder="Your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+</div>
+
+<script>
+    // Function to generate a random addition question
+    function generateQuestion() {
+        var num1 = Math.floor(Math.random() * 10) + 1;
+        var num2 = Math.floor(Math.random() * 10) + 1;
+        return num1 + " + " + num2;
+    }
+
+    // Function to check the answer
+    function checkAnswer() {
+        var userInput = parseInt(document.getElementById('answer').value);
+        var question = document.getElementById('question').innerText;
+        var nums = question.split("+");
+        var correctAnswer = parseInt(nums[0]) + parseInt(nums[1]);
+        var resultContainer = document.getElementById('result');
+
+        if (userInput === correctAnswer) {
+            resultContainer.innerText = "Correct!";
+        } else {
+            resultContainer.innerText = "Incorrect. The correct answer is: " + correctAnswer;
+        }
+
+        // Generate a new question
+        document.getElementById('question').innerText = generateQuestion();
+        document.getElementById('answer').value = '';
+    }
+
+    // Initialize the quiz with a question
+    document.getElementById('question').innerText = generateQuestion();
+</script>
+
+</body>
+</html>
