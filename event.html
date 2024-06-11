@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+    // inline element handle access. -->
+    <button onclick="console.log('hello everyone');">click me!</button>
+
+
+    <button id="bt">double click me!</button>
+
+
+    <div>hello coders !</div>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur.
+    </p>
+
+
+
+    <script>
+
+    //    #  more priority is js ciode than inline handling
+        let btn=document.getElementById("bt");
+        btn.ondblclick=()=>{
+            console.log("bye everyone");
+            confirm("you wnat to go");
+        }
+
+
+
+
+        let div=document.querySelector("div");
+        div.onmouseover=(e)=>{
+            div.style.backgroundColor="yellow";
+            console.log(e);
+            console.log(e.type);
+            console.log(e.target);
+            console.log(e.clientX , e.clientY);
+
+            // here e is event object which contain all information about event.
+
+
+
+            // event listener it is used to perform more than one task with single evnt call.]
+
+
+        let para=document.querySelector("P");
+        para.addEventListener("mouseover",(e)=>{
+            alert("hello coders1!")
+            // console.log(e);
+            // console.log(e.type);
+            // console.log(e.target);
+            // console.log(e.clientX , e.clientY);
+
+
+        });
+        para.addEventListener("mouseover",(e)=>{
+            alert("hello coders2!")
+            // console.log(e);
+            // console.log(e.type);
+            // console.log(e.target);
+            // console.log(e.clientX , e.clientY);
+
+
+        });
+        const h=()=>{
+            console.log("hello js");
+            };
+        para.addEventListener("mouseover",h);
+        // para.addEventListener("mouseover",(e)=>{
+        //     alert("hello coders3!")
+        //     // console.log(e);
+        //     // console.log(e.type);
+        //     // console.log(e.target);
+        //     // console.log(e.clientX , e.clientY);
+
+
+        // });
+        para.addEventListener("mouseover",(e)=>{
+            alert("hello coders4!")
+            // console.log(e);
+            // console.log(e.type);
+            // console.log(e.target);
+            // console.log(e.clientX , e.clientY);
+
+
+
+            // to remove any function from addevntlistener we use to tack with a variable .
+
+        para.removeEventListener("mouseover",h);
+
+
+        });
+
+        }
+
+    </script>
+</body>
+</html>

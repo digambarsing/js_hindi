@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            height: 100%;
+            width: 100%;
+            background-color: red;
+            color: black;
+            font-size: 80px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello coders lets start new chapter !</h1>
+    <h2 id="me">hello </h2>
+    <h3>hello</h3>
+
+
+    <script>
+
+        alert("chane everything !");
+        let head=document.querySelector("h1");
+        head.style.color="blue";
+        head.style.backgroundColor="yellow";
+        head.style.fontSize="26px";
+        head.innerHTML="bye !"
+
+
+
+
+        let ps=document.querySelector("#me");
+      console.log(  ps.getAttribute("id"));
+
+      // create a elment
+
+      let btn=document.createElement("button");
+      btn.innerText="click me!";
+      console.log(btn);
+
+
+      // append new elment in html
+
+      let p=document.querySelector("h2");
+      p.after(btn);
+
+
+
+      // remove a element.
+
+      // first access it to delete.
+
+
+      let para =document.querySelector("h3");
+      para.remove();
+
+
+    </script>
+</body>
+</html>

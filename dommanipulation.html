@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 50px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="first">hello world!</div>
+
+    <hr>
+
+    <div class="f">hello js!</div>
+
+    <hr>
+
+
+    
+    <div class="f">hello js!</div>
+
+    <hr>
+
+    <p>hello coders!</p>
+
+    <hr>
+    <div class="myClass">This is my div</div>
+<div class="myClass">This is my div</div>
+<div class="myClass">This is my div</div>
+
+
+
+    <script>
+        // by id selector
+
+        let a=document.getElementById("first").style.color="red";
+        console.log(a);
+
+
+        // by class seletor
+
+        //let elements = document.getElementsByClassName("myClass");
+        let elements = document.getElementsByClassName("myClass");
+for (let i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = "This is my new text";
+
+   let a= document.getElementsByClassName("f").innerHTML = "This ";
+   console.log(a);
+}
+
+        // by tag name
+
+        document.getElementsByTagName("p").innerText="bye";
+
+
+
+
+    </script>
+    
+</body>
+</html>

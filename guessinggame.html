@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let max=prompt("enter the maximum range of the random number:");
+
+        let randomnumber=Math.floor(Math.random()*max+1);
+
+        let guess=prompt("guess a number:");
+
+        while(true){
+            if(guess=="quit"){
+                console.log("quit the game by user:");
+                break;
+            }
+
+
+            if(guess==randomnumber){
+                console.log("your number is matched! congratulations");
+                break;
+            }else if(guess<randomnumber){
+                guess=prompt("Please guess again your number is too small:");
+
+            }
+            else{
+                guess=prompt("Please guess again your number is too large:");
+            }
+        }
+
+    </script>
+</body>
+</html>
